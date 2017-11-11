@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="backEnd (1)" />
+        <module name="backEnd (2)" />
+        <module name="frontEnd" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backEnd (1)" target="1.8" />
+      <module name="backEnd (2)" target="1.8" />
+      <module name="frontEnd" target="1.8" />
+      <module name="GreatUni" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
