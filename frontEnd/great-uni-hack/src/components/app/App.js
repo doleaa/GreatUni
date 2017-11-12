@@ -1,24 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from './../header/Header'
 import MainPage from './../mainPage/MainPage'
+import Search from './../search/Search'
 import Footer from './../footer/Footer'
-import './App.css';
+import LocationChoice from './../locationchoice/LocationChoice'
+import './App.css'
 
 
-class App extends Component {
-  render() {
-    return (
+
+const App = () => (
       <div className="container">
 
         <Header/>
 
-        <MainPage/>
+        <Search/>
 
         <Footer/>
 
       </div>
-    );
-  }
-}
+    )
 
-export default App;
+export default App
