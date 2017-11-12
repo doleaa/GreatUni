@@ -63,7 +63,7 @@ export const searchOffers = formBody => {
         if (destinationMonth < 10) {
             destinationMonth = "0"+destinationMonth
         }
-        const url = "http://127.0.0.1:8090/metadate/single/offers?origin="
+        const url = "http://127.0.0.1:8090/metadata/single/offers?origin="
         +formBody.origin
         +"&destination="+formBody.destination
         +"&outDate="+year+"-"+originMonth
