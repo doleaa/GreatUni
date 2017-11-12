@@ -3,7 +3,7 @@
     height:500px;
 }
 
-.left {
+.left1 {
     position:relative;
     background-image: url("../../img/img4.jpg");
     z-index:1;
@@ -19,7 +19,7 @@
         transition: -webkit-transform 1s ease-in-out;
 }
 
-.left:hover {
+.left1:hover {
     -webkit-box-shadow: 9px 9px 22px 0px rgba(0,0,0,0.52);
     -moz-box-shadow: 9px 9px 22px 0px rgba(0,0,0,0.52);
     box-shadow: 9px 9px 22px 0px rgba(0,0,0,0.52);
@@ -32,7 +32,7 @@
     z-index:0;
 }
 
-.right{
+.right1{
     position:relative;
     background-image: url("../../img/img6.jpg");
     z-index:1;
@@ -49,7 +49,7 @@
 }
 
 
-.right:hover{
+.right1:hover{
     -webkit-box-shadow: -9px 9px 22px 0px rgba(0,0,0,0.52);
     -moz-box-shadow: -9px 9px 22px 0px rgba(0,0,0,0.52);
     box-shadow: -9px 9px 22px 0px rgba(0,0,0,0.52);
@@ -65,7 +65,7 @@
     z-index:0;
 }
 
-.middle{
+.middle1{
 position:relative;
     background-image: url("../../img/img5.jpg");
     z-index:2;
@@ -76,7 +76,7 @@ position:relative;
     transition: transform 1s ease-in-out;
 }
 
-.middle:hover{
+.middle1:hover{
 transform: scale(1.05,1.05);
 transition: transform 1s ease-in-out;
 }

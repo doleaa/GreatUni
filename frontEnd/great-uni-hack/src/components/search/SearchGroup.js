@@ -1,5 +1,5 @@
 import React from 'react'
-import './Search.css'
+import './SearchGroup.css'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { Months } from './optionsMonth'
 import { Years } from './optionsYear'
@@ -7,7 +7,7 @@ import Select from 'react-select'
 import 'react-select/dist/react-select.css'
 
 
-const Search = () => (
+const SearchGroup = () => (
 
 
 
@@ -44,4 +44,4 @@ const Search = () => (
 
 )
 
-export default Search
+export default SearchGroup
