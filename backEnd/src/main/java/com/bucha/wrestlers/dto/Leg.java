@@ -18,11 +18,11 @@ public class Leg {
     @JsonProperty("CarrierIds")
     private List<Integer> carrierIds;
     @JsonProperty("OriginId")
-    private Integer originId;
+    private String originId;
     @JsonProperty("DestinationId")
-    private Integer destinationId;
+    private String destinationId;
     @JsonProperty("DepartureDate")
-    private Integer departureDate;
+    private String departureDate;
 
     public Leg(){}
 }
