@@ -47,14 +47,14 @@ const DisconnectedSearchSingle = ({ formBody, setOrigin, setDestination, setMont
                   <label>Month</label>
                   <Select name="form-field-name" value={formBody.month} onChange={handleMonth} className="form-month inputFields" placeholder="Select month" options={Months}/>
                 </div>
-                <div className="col-md-1">
+                <div className="col-md-2">
                   <label>Year</label>
                   <Select name="form-field-name" value={formBody.year} onChange={handleYear} className="form-years inputFields" placeholder="Select year" options={Years}/>
                 </div>
 
                 <div className="col-md-2">
                   <label></label>
-                  <p><button className="form-button inputFields" onClick={() => searchOffers(formBody)}>Search</button></p>
+                  <p><button className="form-button swing inputFields" onClick={() => searchOffers(formBody)}>Search</button></p>
                 </div>
               </div>
         </form>
