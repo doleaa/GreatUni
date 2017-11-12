@@ -32,7 +32,7 @@ h6 {
     font-weight:100;
     letter-spacing: -0.2rem;
     color:black;
-    text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);
+    text-shadow: 3px 1px 1px rgba(150, 150, 150, 0.5);
 
 }
 
@@ -67,5 +67,5 @@ h6 {
   background-image: -ms-linear-gradient(top, #00d776, #009952);
   background-image: -o-linear-gradient(top, #00d776, #009952);
   background-image: linear-gradient(to bottom, #00d776, #009952);
-  text-decoration: none;
+
 }
