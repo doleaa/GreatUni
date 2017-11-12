@@ -20,7 +20,7 @@ public class QuoteDates {
     @JsonProperty("Quotes")
     private List<Quote> quotes;
     @JsonProperty("Places")
-    private List<Place> places;
+    private List<QuotePlace> places;
     @JsonProperty("Carriers")
     private List<Carrier> carriers;
 

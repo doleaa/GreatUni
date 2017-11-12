@@ -9,9 +9,7 @@ import lombok.*;
 @Builder
 @EqualsAndHashCode
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class OfferLeg {
-    private String from;
-    private String to;
-    private String airline;
-    private String date;
+public class OutInPair {
+    private String out;
+    private String in;
 }
