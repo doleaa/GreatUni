@@ -3,7 +3,6 @@ const initialState = {
     destination: "",
     month: "",
     year: "",
-
 }
 
 const searchSingle = (state = initialState, action) => {

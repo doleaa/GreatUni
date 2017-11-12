@@ -63,21 +63,22 @@ export const searchOffers = formBody => {
         if (destinationMonth < 10) {
             destinationMonth = "0"+destinationMonth
         }
-        const url = "http://127.0.0.1:8090/metadata/single/offers?origin="
+
+        const url = "http://10.181.5.96:8090/metadata/single/offers?origin="
         +formBody.origin
         +"&destination="+formBody.destination
         +"&outDate="+year+"-"+originMonth
         +"&inDate="+year+"-"+destinationMonth
 
-        http.open("GET", url)
-
-        http.onreadystatechange = () => {
-            if ( http.status === 200 ) {
-                dispatch(setResponse(JSON.parse(http.responseText)))
-            }
-        }
-
-        http.send()
+        fetch(url)
+        .then(response => {
+            return response.json()
+        })
+        .then( json => {
+            dispatch(setResponse(json ))
+        }).catch(error =>
+            console.log(error)
+        )
     }
 }
 

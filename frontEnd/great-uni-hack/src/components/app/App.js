@@ -3,7 +3,7 @@ import Header from './../header/Header'
 import MainPage from './../mainPage/MainPage'
 import SearchGroup from './../search/SearchGroup'
 import SearchSingle from './../search/SearchSingle'
-import FlightDisplay from './../flightDisplay/FlightDisplay'
+import FlightsList from './../flightDisplay/FlightsList'
 import Footer from './../footer/Footer'
 import LocationChoice from './../locationchoice/LocationChoice'
 import './App.css'
@@ -11,11 +11,12 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = state => {
     return {
-        searchType: state.searchType
+        searchType: state.searchType,
+        response: state.response
     }
 }
 
-const DisconnectedApp = ({ searchType }) => {
+const DisconnectedApp = ({ searchType, response }) => {
     if (searchType === "") {
         return (
             <div className="container">
@@ -23,6 +24,22 @@ const DisconnectedApp = ({ searchType }) => {
                 <Header/>
 
                 <MainPage/>
+
+                <Footer/>
+
+            </div>
+        )
+    }
+
+    if (searchType === "single" && response instanceof Array) {
+        return (
+            <div className="container">
+
+                <Header/>
+
+                <FlightsList
+                    offerList={ response }
+                />
 
                 <Footer/>
 

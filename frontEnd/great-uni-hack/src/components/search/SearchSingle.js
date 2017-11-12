@@ -29,9 +29,10 @@ const DisconnectedSearchSingle = ({ formBody, setOrigin, setDestination, setMont
     const handleDestination = event => setDestination(event.target.value)
     const handleMonth = value => setMonth(value)
     const handleYear = value => setYear(value)
+    const denyBrowser = event => {event.preventDefault()}
 
     return (
-        <form className="row overlay box1" onSubmit={() => searchOffers(formBody) }>
+        <form className="row overlay box1" onSubmit={denyBrowser}>
              <div className="inside">
                         <div className="col-md-3">
                   <label>Origin</label>
@@ -53,7 +54,7 @@ const DisconnectedSearchSingle = ({ formBody, setOrigin, setDestination, setMont
 
                 <div className="col-md-2">
                   <label></label>
-                  <p><input type="submit" className="form-button inputFields" value="Search"/></p>
+                  <p><button className="form-button inputFields" onClick={() => searchOffers(formBody)}>Search</button></p>
                 </div>
               </div>
         </form>

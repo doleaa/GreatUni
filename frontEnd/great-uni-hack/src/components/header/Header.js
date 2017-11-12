@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
-import { goHome } from './../../actions'
-import { setGroupType } from './../../actions'
+import { goHome, setGroupType, setResponse } from './../../actions'
 import { connect } from 'react-redux'
 
 const mapDispatchToProps = dispatch => {
@@ -11,14 +10,17 @@ const mapDispatchToProps = dispatch => {
         },
         setGroupType: groupType => {
             dispatch(setGroupType(groupType))
+        },
+        setResponse: response => {
+            dispatch(setResponse(response))
         }
     }
 }
 
-const DisconnectedHeader = ({ goHome, setGroupType }) => (
+const DisconnectedHeader = ({ goHome, setGroupType, setResponse }) => (
     <div className="row">
         <div className="col-md-10">
-            <h1 onClick={() => {goHome(); setGroupType("");}}>TravelMate</h1>
+            <h1 onClick={() => {goHome(); setGroupType(""); setResponse("")}}>TravelMate</h1>
         </div>
 
         <div className="col-md-2">
