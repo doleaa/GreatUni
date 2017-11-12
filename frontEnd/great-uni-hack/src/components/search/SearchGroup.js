@@ -40,7 +40,7 @@ const SearchGroup = () => (
               <p><button type="submit" className="form-button inputFields">Search</button></p>
             </div>
           </div>
-          </form>
+    </form>
 
 )
 
