@@ -4,6 +4,7 @@ package com.bucha.wrestlers.resources;
 import com.bucha.wrestlers.dto.Country;
 import com.bucha.wrestlers.dto.Place;
 import com.bucha.wrestlers.dto.Places;
+import com.bucha.wrestlers.dto.QuoteDates;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;
@@ -62,7 +63,7 @@ public class MetaDataResource extends BaseBackEndResource {
         Places originPlaces = getSuggestedPlaces(origin);
         Places destinationPlaces = getSuggestedPlaces(destination);
 
-        Object resp = getAllOffers(
+        QuoteDates resp = getAllOffers(
                 originPlaces.getPlaces().get(0).getPlaceId(),
                 destinationPlaces.getPlaces().get(0).getPlaceId(),
                 outDate,
@@ -73,7 +74,7 @@ public class MetaDataResource extends BaseBackEndResource {
     }
 
     @SneakyThrows
-    private Object getAllOffers(String origin, String destination, String outDate, String inDate) {
+    private QuoteDates getAllOffers(String origin, String destination, String outDate, String inDate) {
         String url = "http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/UK/GBP/en-GB" +
                 "/%s/%s/%s/%s?apiKey=%s";
 
@@ -82,7 +83,7 @@ public class MetaDataResource extends BaseBackEndResource {
 
         HttpResponse response = client.execute(getRequest);
 
-        return getObjectMapper().readValue(response.getEntity().getContent(), Object.class);
+        return getObjectMapper().readValue(response.getEntity().getContent(), QuoteDates.class);
     }
 
     @SneakyThrows

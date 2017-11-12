@@ -19,4 +19,6 @@ public class Dates {
     private List<Date> outboundDates;
     @JsonProperty("InboundDates")
     private List<Date> inboundDates;
+
+    public Dates() {}
 }

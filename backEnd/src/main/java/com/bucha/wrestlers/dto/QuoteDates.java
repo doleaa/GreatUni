@@ -14,15 +14,15 @@ import java.util.List;
 @Setter
 @EqualsAndHashCode
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Leg {
-    @JsonProperty("CarrierIds")
-    private List<Integer> carrierIds;
-    @JsonProperty("OriginId")
-    private Integer originId;
-    @JsonProperty("DestinationId")
-    private Integer destinationId;
-    @JsonProperty("DepartureDate")
-    private Integer departureDate;
+public class QuoteDates {
+    @JsonProperty("Dates")
+    private Dates dates;
+    @JsonProperty("Quotes")
+    private List<Quote> quotes;
+    @JsonProperty("Places")
+    private List<Place> places;
+    @JsonProperty("Carriers")
+    private List<Carrier> carriers;
 
-    public Leg(){}
+    public QuoteDates() {}
 }

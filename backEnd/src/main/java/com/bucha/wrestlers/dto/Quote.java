@@ -22,4 +22,5 @@ public class Quote {
     @JsonProperty("InboundLeg")
     private Leg inboundLeg;
 
+    public Quote() {}
 }
