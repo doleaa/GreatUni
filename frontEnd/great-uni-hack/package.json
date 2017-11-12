@@ -6,7 +6,9 @@
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "react-scripts": "1.0.17",
-    "js-datepicker": "2.1.5"
+    "js-datepicker": "2.1.5",
+    "react-bootstrap-typeahead": "2.0.0-rc.4",
+    "react-select": "1.0.0-rc.10"
   },
   "scripts": {
     "start": "react-scripts start",
